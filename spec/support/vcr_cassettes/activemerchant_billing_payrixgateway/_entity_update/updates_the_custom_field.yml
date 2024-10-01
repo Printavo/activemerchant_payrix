@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://test-api.payrix.com/entities/t1_ent_626afdc71c90d0b8a1388ce
+    body:
+      encoding: UTF-8
+      string: '{"custom":"custom-100"}'
+    headers:
+      Content-Type:
+      - application/json
+      Apikey:
+      - respec-test-token-will-not-work-in-production
+      Connection:
+      - close
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Jun 2022 21:06:34 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1800'
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE,OPTIONS
+      Access-Control-Allow-Headers:
+      - ACCEPT,APIKEY,CONTENT-TYPE,PASSWORD,REQUEST-TOKEN,REQUEST_TOKEN,RESETKEY,SEARCH,SESSIONKEY,TOKEN,TOTALS,USERNAME
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 71efb5724a77fbc0-MCI
+    body:
+      encoding: ASCII-8BIT
+      string: '{"response":{"data":[{"id":"t1_ent_626afdc71c90d0b8a1388ce","created":"2022-04-28
+        16:49:11.1176","modified":"2022-06-21 17:05:03.86","creator":"t1_log_620d33c79fd9b4897252a37","modifier":"t1_log_620d33c79fd9b4897252a37","ipCreated":"172.70.175.174","ipModified":"172.68.150.139","clientIp":"97.118.88.23","login":"t1_log_626afdc71b2313d82c3042b","parameter":null,"type":0,"name":"123123
+        12313","address1":"123213","address2":"","city":"123123","state":"CO","zip":"12312-3321","country":"USA","timezone":"mst","phone":"1231231231","fax":null,"email":"123213@132.com","website":null,"ein":"1231","tcVersion":"10121WorldPay","tcDate":"2022-04-28
+        16:49:11","tcIp":"172.70.175.174","tcAcceptDate":null,"tcAcceptIp":"97.118.88.23","custom":"custom-100","inactive":0,"frozen":0,"tinStatus":0,"reserved":0,"checkStage":"postboard","public":0,"customerPhone":null,"locations":1,"industry":"123123","displayName":null,"totalCreditDisbursements":0,"payoutSecondaryDescriptor":"","einType":null,"irsFilingName":null,"currency":"USD","appleDomain":null}],"details":{"requestId":1},"errors":[]}}'
+  recorded_at: Tue, 21 Jun 2022 21:06:34 GMT
+recorded_with: VCR 6.0.0

@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://test-api.payrix.com/merchants/t1_mer_6261d8dd066e9d49f047b3e
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Apikey:
+      - respec-test-token-will-not-work-in-production
+      Connection:
+      - close
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 10 Jun 2022 17:52:58 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1800'
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE,OPTIONS
+      Access-Control-Allow-Headers:
+      - ACCEPT,APIKEY,CONTENT-TYPE,PASSWORD,REQUEST-TOKEN,REQUEST_TOKEN,RESETKEY,SEARCH,SESSIONKEY,TOKEN,TOTALS,USERNAME
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7193f6baafcf08df-SEA
+    body:
+      encoding: ASCII-8BIT
+      string: '{"response":{"data":[{"id":"t1_mer_6261d8dd066e9d49f047b3e","created":"2022-04-21
+        18:21:17.032","modified":"2022-05-11 17:51:08.3638","creator":"t1_log_620d33c79fd9b4897252a37","modifier":"t1_log_6261d8dcef3c02296a23ac4","lastActivity":"2022-05-11
+        17:51:08","entity":"t1_ent_6261d8dcf0c10a0f9d43523","dba":"","new":0,"established":null,"annualCCSales":1000,"avgTicket":1,"amex":null,"discover":null,"mcc":"2741","status":2,"boarded":20220421,"inactive":0,"frozen":0,"environment":"cardPresent","visaMvv":null,"chargebackNotificationEmail":null,"statusReason":null,"totalApprovedSales":40000,"autoBoarded":1,"saqType":null,"saqDate":null,"qsa":null,"letterStatus":0,"letterDate":null,"tcAttestation":1,"visaDisclosure":1,"disclosureIP":"136.29.79.47","disclosureDate":20220421,"accountClosureReasonCode":null,"accountClosureReasonDate":null,"annualCCSaleVolume":null,"annualACHSaleVolume":null,"riskLevel":null,"creditRatio":null,"creditTimeliness":null,"chargebackRatio":null,"ndxDays":null,"ndxPercentage":null,"advancedBilling":null,"locationType":null,"percentKeyed":null,"totalVolume":null,"percentEcomm":null,"seasonal":null,"amexVolume":null,"incrementalAuthSupported":null,"tmxSessionId":null,"percentBusiness":null,"applePayActive":1,"applePayStatus":null,"googlePayActive":1}],"details":{"requestId":1,"totals":[],"page":{"current":1,"last":1,"hasMore":false}},"errors":[]}}'
+  recorded_at: Fri, 10 Jun 2022 17:52:58 GMT
+recorded_with: VCR 6.0.0

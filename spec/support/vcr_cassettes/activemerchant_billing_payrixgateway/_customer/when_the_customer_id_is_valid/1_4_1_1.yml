@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://test-api.payrix.com/customers/t1_cus_62433a716b885716b07066d
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Apikey:
+      - respec-test-token-will-not-work-in-production
+      Connection:
+      - close
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 11 May 2022 20:37:46 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1800'
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE,OPTIONS
+      Access-Control-Allow-Headers:
+      - ACCEPT,APIKEY,CONTENT-TYPE,PASSWORD,REQUEST-TOKEN,REQUEST_TOKEN,RESETKEY,SEARCH,SESSIONKEY,TOKEN,TOTALS,USERNAME
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 709db6e5fa7b8ea5-DEN
+    body:
+      encoding: ASCII-8BIT
+      string: '{"response":{"data":[{"id":"t1_cus_62433a716b885716b07066d","created":"2022-03-29
+        12:57:21.4407","modified":"2022-03-29 12:57:21.4407","creator":"t1_log_620d33c79fd9b4897252a37","modifier":"t1_log_620d33c79fd9b4897252a37","login":"t1_log_620d33c79fd9b4897252a37","merchant":"t1_mer_6227be75a75b292bde6dbe2","first":"344","middle":null,"last":"234324","company":null,"email":"john@printavo.com","fax":null,"phone":"234324","country":null,"zip":"80205","state":"Colorado","city":"Denver","address2":null,"address1":"2347
+        Curtis Street","inactive":0,"frozen":0,"shippingFirst":null,"shippingMiddle":null,"shippingLast":null,"shippingCompany":null,"shippingAddress1":null,"shippingAddress2":null,"shippingCity":null,"shippingState":null,"shippingZip":null,"shippingCountry":null,"shippingPhone":null,"shippingFax":null,"custom":null,"authTokenCustomer":null,"entity":"t1_ent_6227be759e683008bed22a7"}],"details":{"requestId":1,"totals":[],"page":{"current":1,"last":1,"hasMore":false}},"errors":[]}}'
+  recorded_at: Wed, 11 May 2022 20:37:46 GMT
+recorded_with: VCR 6.0.0

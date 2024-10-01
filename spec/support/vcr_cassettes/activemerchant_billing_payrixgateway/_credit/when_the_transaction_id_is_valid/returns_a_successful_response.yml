@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://test-api.payrix.com/txns
+    body:
+      encoding: UTF-8
+      string: '{"fortxn":"t1_txn_626aaa5e6a0749d6d715419","type":5,"origin":2,"amount":null}'
+    headers:
+      Content-Type:
+      - application/json
+      Apikey:
+      - respec-test-token-will-not-work-in-production
+      Connection:
+      - close
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 11 May 2022 21:33:54 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1800'
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE,OPTIONS
+      Access-Control-Allow-Headers:
+      - ACCEPT,APIKEY,CONTENT-TYPE,PASSWORD,REQUEST-TOKEN,REQUEST_TOKEN,RESETKEY,SEARCH,SESSIONKEY,TOKEN,TOTALS,USERNAME
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 709e091dae798eb4-DEN
+    body:
+      encoding: ASCII-8BIT
+      string: '{"response":{"data":[{"id":"t1_txn_627c2bc27061a24bd3fa6a1","created":"2022-05-11
+        17:33:54.4607","modified":"2022-05-11 17:33:54.5516","creator":"t1_log_620d33c79fd9b4897252a37","modifier":"t1_log_620d33c79fd9b4897252a37","ipCreated":"172.68.35.8","ipModified":"172.68.35.8","merchant":"t1_mer_622f845e58815ff11e1ae17","token":null,"payment":"g157968b6df1534","fortxn":"t1_txn_626aaa5e6a0749d6d715419","fromtxn":null,"batch":null,"subscription":null,"type":5,"expiration":"1224","currency":"USD","platform":"VANTIV","authDate":null,"authCode":null,"captured":"2022-05-11
+        17:33:54","settled":null,"settledCurrency":null,"settledTotal":null,"allowPartial":0,"order":"","description":null,"descriptor":"Mike
+        D","terminal":null,"terminalCapability":null,"entryMode":null,"origin":2,"tax":903,"total":13011,"cashback":null,"authorization":null,"approved":13011,"cvv":0,"swiped":0,"emv":0,"signature":0,"unattended":null,"clientIp":null,"first":null,"middle":null,"last":null,"company":null,"email":null,"address1":null,"address2":null,"city":null,"state":null,"zip":null,"country":null,"phone":null,"status":"3","refunded":0,"reserved":0,"misused":null,"imported":0,"inactive":0,"frozen":0,"discount":null,"shipping":null,"duty":null,"pin":0,"traceNumber":null,"cvvStatus":"notProvided","unauthReason":"customerCancelled","fee":null,"fundingCurrency":"USD","authentication":null,"authenticationId":null,"cofType":null,"copyReason":null,"originalApproved":13011,"currencyConversion":null,"serviceCode":null,"authTokenCustomer":null,"debtRepayment":"0","statement":null,"convenienceFee":0,"surcharge":null,"channel":null,"funded":null,"fundingEnabled":"1","requestSequence":1,"processedSequence":0,"mobile":null,"pinEntryCapability":null}],"details":{"requestId":1},"errors":[]}}'
+  recorded_at: Wed, 11 May 2022 21:33:54 GMT
+recorded_with: VCR 6.0.0

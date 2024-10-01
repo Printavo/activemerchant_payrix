@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://test-api.payrix.com/txns/t1_txn_627ac6be1da3ad2e0858d91
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Apikey:
+      - respec-test-token-will-not-work-in-production
+      Connection:
+      - close
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 11 May 2022 20:37:54 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1800'
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE,OPTIONS
+      Access-Control-Allow-Headers:
+      - ACCEPT,APIKEY,CONTENT-TYPE,PASSWORD,REQUEST-TOKEN,REQUEST_TOKEN,RESETKEY,SEARCH,SESSIONKEY,TOKEN,TOTALS,USERNAME
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 709db716dfa593d4-DFW
+    body:
+      encoding: ASCII-8BIT
+      string: '{"response":{"data":[{"id":"t1_txn_627ac6be1da3ad2e0858d91","created":"2022-05-10
+        16:10:38.1226","modified":"2022-05-10 22:01:45.7168","creator":"t1_log_6261d8dcef3c02296a23ac4","modifier":"000000000000001","ipCreated":"172.70.214.71","ipModified":"172.70.214.71","merchant":"t1_mer_6261d8dd066e9d49f047b3e","token":null,"payment":"g157b215cd94669","fortxn":null,"fromtxn":null,"batch":"t1_bth_627ac69fa186b1edc244a95","subscription":null,"type":1,"expiration":"1233","currency":"USD","platform":"VANTIV","authDate":null,"authCode":null,"captured":"2022-05-10
+        16:31:12","settled":20220510,"settledCurrency":"USD","settledTotal":10000,"allowPartial":0,"order":"","description":null,"descriptor":"John
+        Van Etten","terminal":null,"terminalCapability":null,"entryMode":null,"origin":8,"tax":null,"total":10000,"cashback":null,"authorization":"86585","approved":10000,"cvv":1,"swiped":0,"emv":0,"signature":0,"unattended":null,"clientIp":null,"first":"Chargeback","middle":null,"last":"
+        Test 3","company":null,"email":"Test@test.com","address1":"Testing Chargeback","address2":null,"city":"Test","state":"CA","zip":"90039","country":null,"phone":"3235444443","status":4,"refunded":0,"reserved":0,"misused":0,"imported":0,"inactive":0,"frozen":0,"discount":0,"shipping":0,"duty":0,"pin":0,"traceNumber":null,"cvvStatus":null,"unauthReason":null,"fee":null,"fundingCurrency":"USD","authentication":null,"authenticationId":null,"cofType":null,"copyReason":null,"originalApproved":10000,"currencyConversion":null,"serviceCode":null,"authTokenCustomer":null,"debtRepayment":0,"statement":null,"convenienceFee":0,"surcharge":null,"channel":null,"funded":20220510,"fundingEnabled":1,"requestSequence":1,"processedSequence":1,"mobile":null,"pinEntryCapability":null}],"details":{"requestId":1,"totals":[],"page":{"current":1,"last":1,"hasMore":false}},"errors":[]}}'
+  recorded_at: Wed, 11 May 2022 20:37:54 GMT
+recorded_with: VCR 6.0.0

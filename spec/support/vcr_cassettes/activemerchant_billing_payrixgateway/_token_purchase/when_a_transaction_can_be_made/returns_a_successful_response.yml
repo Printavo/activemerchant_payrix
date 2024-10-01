@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://test-api.payrix.com/txns
+    body:
+      encoding: UTF-8
+      string: '{"token":"4da838f0da85bdcd0c906c68c8ab7995","currency":"USD","total":400,"origin":8,"type":1,"order":"1234567","description":"Payment
+        for Invoice #10","tax":1}'
+    headers:
+      Content-Type:
+      - application/json
+      Apikey:
+      - respec-test-token-will-not-work-in-production
+      Connection:
+      - close
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 11 May 2022 20:33:56 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1800'
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE,OPTIONS
+      Access-Control-Allow-Headers:
+      - ACCEPT,APIKEY,CONTENT-TYPE,PASSWORD,REQUEST-TOKEN,REQUEST_TOKEN,RESETKEY,SEARCH,SESSIONKEY,TOKEN,TOTALS,USERNAME
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 709db146f9db8eb1-DEN
+    body:
+      encoding: ASCII-8BIT
+      string: '{"response":{"data":[{"id":"t1_txn_627c1db4a5c9f4df02d883d","created":"2022-05-11
+        16:33:56.6804","modified":"2022-05-11 16:33:56.8307","creator":"t1_log_620d33c79fd9b4897252a37","modifier":"t1_log_620d33c79fd9b4897252a37","ipCreated":"172.68.35.8","ipModified":"172.68.35.8","merchant":"t1_mer_6227be75a75b292bde6dbe2","token":"4da838f0da85bdcd0c906c68c8ab7995","payment":"g157968b6df1534","fortxn":null,"fromtxn":null,"batch":"t1_bth_627c1db4a6f8451c1d4e41c","subscription":null,"type":1,"expiration":"1144","currency":"USD","platform":"VANTIV","authDate":null,"authCode":null,"captured":null,"settled":null,"settledCurrency":null,"settledTotal":null,"allowPartial":0,"order":"1234567","description":"Payment
+        for Invoice #10","descriptor":"John Van Etten","terminal":null,"terminalCapability":null,"entryMode":null,"origin":8,"tax":1,"total":400,"cashback":null,"authorization":"79529","approved":"400","cvv":0,"swiped":0,"emv":0,"signature":0,"unattended":null,"clientIp":null,"first":"John","middle":null,"last":"Doe","company":null,"email":"john@printavo.com","address1":"123
+        Company Street","address2":null,"city":"Chicago","state":"Guarda","zip":"60654","country":null,"phone":"123123123","status":"1","refunded":0,"reserved":0,"misused":null,"imported":0,"inactive":0,"frozen":0,"discount":null,"shipping":null,"duty":null,"pin":0,"traceNumber":null,"cvvStatus":"notProvided","unauthReason":null,"fee":null,"fundingCurrency":"USD","authentication":null,"authenticationId":null,"cofType":"single","copyReason":null,"originalApproved":"400","currencyConversion":null,"serviceCode":null,"authTokenCustomer":null,"debtRepayment":"0","statement":null,"convenienceFee":0,"surcharge":null,"channel":null,"funded":null,"fundingEnabled":"1","requestSequence":1,"processedSequence":0,"mobile":null,"pinEntryCapability":null}],"details":{"requestId":1},"errors":[]}}'
+  recorded_at: Wed, 11 May 2022 20:33:56 GMT
+recorded_with: VCR 6.0.0

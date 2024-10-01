@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://test-api.payrix.com/entities/t1_ent_6261d8dcf0c10a0f9d43523
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Apikey:
+      - respec-test-token-will-not-work-in-production
+      Connection:
+      - close
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 11 May 2022 20:38:01 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1800'
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE,OPTIONS
+      Access-Control-Allow-Headers:
+      - ACCEPT,APIKEY,CONTENT-TYPE,PASSWORD,REQUEST-TOKEN,REQUEST_TOKEN,RESETKEY,SEARCH,SESSIONKEY,TOKEN,TOTALS,USERNAME
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 709db742ce2d2821-DFW
+    body:
+      encoding: ASCII-8BIT
+      string: '{"response":{"data":[{"id":"t1_ent_6261d8dcf0c10a0f9d43523","created":"2022-04-21
+        18:21:16.9864","modified":"2022-05-10 17:36:25.1064","creator":"t1_log_620d33c79fd9b4897252a37","modifier":"t1_log_620d33c79fd9b4897252a37","ipCreated":"172.70.42.67","ipModified":"172.69.70.5","clientIp":"136.29.79.47","login":"t1_log_6261d8dcef3c02296a23ac4","parameter":null,"type":0,"name":"John
+        Van Etten","address1":"1200 Cherokee St","address2":null,"city":"denver","state":"CO","zip":"80202-4","country":"USA","timezone":"mst","phone":"1231231231","fax":null,"email":"john@prinatvo.com","website":"https:\/\/www.printavo.com","ein":"3123","tcVersion":"10121WorldPay","tcDate":"2022-04-21
+        18:21:16","tcIp":"172.70.42.67","tcAcceptDate":null,"tcAcceptIp":"136.29.79.47","custom":"printavo(20216)","inactive":0,"frozen":0,"tinStatus":0,"reserved":0,"checkStage":"postboard","public":0,"customerPhone":null,"locations":1,"industry":"Print
+        shop","displayName":null,"totalCreditDisbursements":0,"payoutSecondaryDescriptor":null,"einType":null,"irsFilingName":null,"currency":"USD","appleDomain":null}],"details":{"requestId":1,"totals":[],"page":{"current":1,"last":1,"hasMore":false}},"errors":[]}}'
+  recorded_at: Wed, 11 May 2022 20:38:01 GMT
+recorded_with: VCR 6.0.0

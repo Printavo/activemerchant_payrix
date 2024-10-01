@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://test-api.payrix.com/entries
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Apikey:
+      - respec-test-token-will-not-work-in-production
+      Search:
+      - eventId[equals]=t1_chb_627ad341b3226992c967215&isFee[equals]=1
+      Connection:
+      - close
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 12 May 2022 23:31:11 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1800'
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE,OPTIONS
+      Access-Control-Allow-Headers:
+      - ACCEPT,APIKEY,CONTENT-TYPE,PASSWORD,REQUEST-TOKEN,REQUEST_TOKEN,RESETKEY,SEARCH,SESSIONKEY,TOKEN,TOTALS,USERNAME
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 70a6f24dcc4d8eb4-DEN
+    body:
+      encoding: ASCII-8BIT
+      string: '{"response":{"data":[{"id":"t1_etr_627ad341ea88e3187d5cb4e","created":"2022-05-10
+        17:04:01.9684","modified":"2022-05-10 17:04:01.9684","creator":"000000000000001","modifier":"000000000000001","entity":"t1_ent_620d33c7a2695404bea7463","onentity":"t1_ent_6261d8dcf0c10a0f9d43523","fromentity":null,"opposingEntry":"t1_etr_627ad341e8fef0ccfcf4cce","fund":"t1_fun_6227d2d4235df9d0309c608","fee":null,"disbursement":null,"refund":null,"txn":null,"chargeback":null,"adjustment":null,"event":11,"eventId":"t1_chb_627ad341b3226992c967215","description":"CHARGEBACK
+        fee schedule","amount":-3000,"unsourced":null,"pending":null,"profitShare":null,"originalCurrency":null,"currencyRate":null,"isFee":1,"statement":null,"settlement":null,"archiveSummary":0,"pendingEntry":"t1_per_627ad341e695b4a3371b7bb","pendingEntryCreated":"2022-05-10
+        17:04:01","originalEventId":"t1_chb_627ad341b3226992c967215","originalEvent":11}],"details":{"requestId":1,"totals":[],"page":{"current":1,"last":1,"hasMore":false}},"errors":[]}}'
+  recorded_at: Thu, 12 May 2022 23:31:11 GMT
+recorded_with: VCR 6.0.0
