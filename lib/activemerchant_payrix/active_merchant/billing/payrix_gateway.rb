@@ -9,8 +9,6 @@ module ActiveMerchant
       LIVE_URL_V2 = "https://apiv2.payrix.com".freeze
       TEST_URL = "https://test-api.payrix.com".freeze
 
-      PRIVATE_TOKEN = ENV["PAYRIX_PRIVATE_TOKEN"]
-
       ORIGIN_ECOMMERCE = 2
       ORIGIN_PAYFRAME = 8
 
@@ -131,7 +129,7 @@ module ActiveMerchant
 
       ITEM_UM_EACH = "EACH".freeze
 
-      def initialize(options = {private_token: PRIVATE_TOKEN, test: !::Rails.env.production?})
+      def initialize(options = {private_token: ENV["PAYRIX_PRIVATE_TOKEN"], test: ActivemerchantPayrix.test?})
         requires!(options, :private_token)
 
         super

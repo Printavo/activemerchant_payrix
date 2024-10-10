@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe ActiveMerchant::Billing::PayrixGateway, :vcr do
-  let(:private_token) { ActiveMerchant::Billing::PayrixGateway::PRIVATE_TOKEN }
+  let(:private_token) { ENV["PAYRIX_PRIVATE_TOKEN"] }
   let(:gateway) { described_class.new(private_token:, test: true) }
 
   shared_examples "failed object lookup requests" do
