@@ -10,3 +10,5 @@ gem "rake", "~> 13.2"
 gem "standard", "~> 1.36"
 
 gem 'nokogiri', '>= 1.19.1'
+
+gem 'activesupport', '>= 7.2.3.1'
