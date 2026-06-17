@@ -256,7 +256,7 @@ RSpec.describe ActiveMerchant::Billing::PayrixGateway, :vcr do
       end
     end
 
-    context "when a the org or entity does not exist" do
+    context "when the org or entity does not exist" do
       let(:org_id) { "t1_org_invalid_id" }
       let(:entity_id) { "t1_ent_invalid_id" }
 

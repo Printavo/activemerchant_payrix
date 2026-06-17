@@ -10,7 +10,7 @@ http_interactions:
       Content-Type:
       - application/json
       Apikey:
-      - respec-test-token-will-not-work-in-production
+      - rspec-test-token-will-not-work-in-production
       Connection:
       - close
       Accept-Encoding:

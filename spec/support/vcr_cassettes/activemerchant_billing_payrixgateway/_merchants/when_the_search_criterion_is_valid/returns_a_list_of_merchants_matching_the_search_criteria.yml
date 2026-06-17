@@ -10,7 +10,7 @@ http_interactions:
       Content-Type:
       - application/json
       Apikey:
-      - respec-test-token-will-not-work-in-production
+      - rspec-test-token-will-not-work-in-production
       Search:
       - entity[equals]=t1_ent_6227be759e683008bed22a7
       Connection:
