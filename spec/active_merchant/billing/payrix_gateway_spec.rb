@@ -202,6 +202,92 @@ RSpec.describe ActiveMerchant::Billing::PayrixGateway, :vcr do
     end
   end
 
+  describe "#org" do
+    subject { gateway.org(id) }
+
+    context "when the ID is valid" do
+      let(:id) { "t1_org_6272defe4219ff270464554" }
+
+      it { is_expected.to include({id: "t1_org_6272defe4219ff270464554"}) }
+    end
+
+    include_examples "failed object lookup requests"
+  end
+
+  describe "#orgs" do
+    subject { gateway.orgs(search, ["page[limit]=1"]) }
+
+    context "when the search is for an org with a specific name" do
+      let(:search) { ["name[equals]=All Merchant Fees"] }
+
+      it "shows matching org data" do
+        expect(subject.count).to eq(1)
+        expect(subject[0]).to include(id: "t1_org_6262bb2706de85c27ad5abb")
+      end
+    end
+
+    context "when no search is provided" do
+      let(:search) { [] }
+
+      it "returns a list of orgs" do
+        expect(subject.count).to be >= 1
+      end
+    end
+  end
+
+  describe "#org_entity_create" do
+    subject { gateway.org_entity_create(org_id, entity_id) }
+
+    context "when the org and entity both exist and are not yet associated" do
+      let(:org_id) { "t1_org_6272defe4219ff270464554" }
+      let(:entity_id) { "t1_ent_6261d8dcf0c10a0f9d43523" }
+
+      it "returns a successful response" do
+        expect(subject.success?).to eq(true)
+      end
+    end
+
+    context "when the result would be a duplicate association" do
+      let(:org_id) { "t1_org_duplicate_19ff270464554" }
+      let(:entity_id) { "t1_ent_duplicate_c10a0f9d43523" }
+
+      it "returns an unsuccessful response" do
+        expect(subject.success?).to eq(false)
+      end
+    end
+
+    context "when a the org or entity does not exist" do
+      let(:org_id) { "t1_org_invalid_id" }
+      let(:entity_id) { "t1_ent_invalid_id" }
+
+      it "returns an unsuccessful response" do
+        expect(subject.success?).to eq(false)
+      end
+    end
+  end
+
+  describe "#org_entity_delete" do
+    subject { gateway.org_entity_delete(id) }
+
+    context "when the org_entity_id exists" do
+      let(:id) { "t1_oet_6a330a9b157729cfce4ed50" }
+
+      it "returns a successful response with the deleted data" do
+        expect(subject.success?).to eq(true)
+        expect(subject.params.dig(:data).count).to eq(1)
+      end
+    end
+
+    context "when the org_entity_id does not exist" do
+      let(:id) { "t1_oet_invalid_id" }
+
+      it "returns a successful response with no deleted data" do
+        expect(subject.success?).to eq(true)
+        expect(subject.params.dig(:data).count).to eq(0)
+      end
+    end
+  end
+
   describe "#transaction_update" do
     subject { gateway.transaction_update(id, update_fields) }
 

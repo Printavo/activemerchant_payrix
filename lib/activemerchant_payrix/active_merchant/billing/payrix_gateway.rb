@@ -211,13 +211,13 @@ module ActiveMerchant
         get_some(endpoint: :orgs, url_params:, headers: token_header.merge(search: search.join("&")))
       end
 
-      def org_entities_create(org, entity)
+      def org_entity_create(org, entity)
         payload = new_org_entity_payload(org, entity)
 
         post(:org_entities, payload)
       end
 
-      def org_entities_delete(id)
+      def org_entity_delete(id)
         return if id.blank?
 
         delete(:org_entities, id)
