@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://test-api.payrix.com/orgEntities/t1_oet_6a330a9b157729cfce4ed50
+    body:
+      encoding: UTF-8
+      string: 'null'
+    headers:
+      Content-Type:
+      - application/json
+      Apikey:
+      - rspec-test-token-will-not-work-in-production
+      Connection:
+      - close
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 17 Jun 2026 20:59:55 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=trz6yLtt5cysG352sHBD92IhBVSd47a_WJQcUDmG.L0-1781729994.9431882-1.0.1.1-3KcPtunqcf8tvfqTBpJ.PHiXORaWUpILDQFq4CYJ13t8w88RRVXPDuwZbf4duuuQqkhJrRfIJlVu_XBEoVcoxH4sl2vgl4U.CW_3ZIkrFJcvqd1TyXOt3bCxnulPuzIq;
+        HttpOnly; SameSite=None; Secure; Path=/; Domain=payrix.com; Expires=Wed, 17
+        Jun 2026 21:29:55 GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1800'
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE,OPTIONS
+      Access-Control-Allow-Headers:
+      - ACCEPT,APIKEY, Authorization, CONTENT-TYPE,PASSWORD,REQUEST-TOKEN,REQUEST_TOKEN,RESETKEY,SEARCH,SESSIONKEY,TXNSESSIONKEY,TOKEN,TOTALS,USERNAME,X-FORWARDED-FOR,X-SOURCE,TRACEPARENT,X-DATADOG-ORIGIN,X-DATADOG-PARENT-ID,X-DATADOG-SAMPLING-PRIORITY,X-DATADOG-TRACE-ID,
+        PRE-SHARED-KEY
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - a0d4fb146a3a3d49-PDX
+    body:
+      encoding: ASCII-8BIT
+      string: '{"response":{"data":[{"id":"t1_oet_6a330a9b157729cfce4ed50","created":"2026-06-17
+        16:59:07.1062","modified":"2026-06-17 16:59:07.1062","creator":"t1_log_620d33c79fd9b4897252a37","modifier":"t1_log_620d33c79fd9b4897252a37","org":"t1_org_6272defe4219ff270464554","entity":"t1_ent_63efbe70031d140b1e16547"}],"details":{"requestId":1},"errors":[]}}'
+  recorded_at: Wed, 17 Jun 2026 20:59:55 GMT
+recorded_with: VCR 6.3.1
