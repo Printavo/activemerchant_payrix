@@ -38,4 +38,4 @@ VCR.configure do |config|
   end
 end
 
-ENV["PAYRIX_PRIVATE_TOKEN"] ||= "respec-test-token-will-not-work-in-production"
+ENV["PAYRIX_PRIVATE_TOKEN"] ||= "rspec-test-token-will-not-work-in-production"

@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://test-api.payrix.com/orgs?page%5Blimit%5D=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Apikey:
+      - rspec-test-token-will-not-work-in-production
+      Search:
+      - name[equals]=All Merchant Fees
+      Connection:
+      - close
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 16 Jun 2026 23:03:27 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=OJ5ZWu1X8ywQhqpsyPoqD9k1s67Km5RbBEmop.bch1Y-1781651006.8797731-1.0.1.1-YNp2gWX_Dq_drdPbYOlPiHZmXYizwGKXajHe7a61HcdN0fr6Yq5H1a5fpFiS.mindO9LgiDsw1QfkrpI4So.IoAIus5jNjqNIQIGKLX7EI9mzhRGf8yV86Q1aZZpduac;
+        HttpOnly; SameSite=None; Secure; Path=/; Domain=payrix.com; Expires=Tue, 16
+        Jun 2026 23:33:27 GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1800'
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE,OPTIONS
+      Access-Control-Allow-Headers:
+      - ACCEPT,APIKEY, Authorization, CONTENT-TYPE,PASSWORD,REQUEST-TOKEN,REQUEST_TOKEN,RESETKEY,SEARCH,SESSIONKEY,TXNSESSIONKEY,TOKEN,TOTALS,USERNAME,X-FORWARDED-FOR,X-SOURCE,TRACEPARENT,X-DATADOG-ORIGIN,X-DATADOG-PARENT-ID,X-DATADOG-SAMPLING-PRIORITY,X-DATADOG-TRACE-ID,
+        PRE-SHARED-KEY
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - a0cd72a8fdc88b90-PDX
+    body:
+      encoding: ASCII-8BIT
+      string: '{"response":{"data":[{"id":"t1_org_6262bb2706de85c27ad5abb","created":"2022-04-22
+        10:26:47.0282","modified":"2022-04-22 10:26:47.0282","creator":"t1_log_620d33c79fd9b4897252a37","modifier":"t1_log_620d33c79fd9b4897252a37","login":"t1_log_620d33c79fd9b4897252a37","name":"All
+        Merchant Fees","description":"","defaultFeeFromEntity":null}],"details":{"requestId":1,"totals":[],"page":{"current":1,"last":1,"hasMore":false}},"errors":[]}}'
+  recorded_at: Tue, 16 Jun 2026 23:03:27 GMT
+recorded_with: VCR 6.3.1

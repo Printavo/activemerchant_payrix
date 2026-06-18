@@ -10,7 +10,7 @@ http_interactions:
       Content-Type:
       - application/json
       Apikey:
-      - respec-test-token-will-not-work-in-production
+      - rspec-test-token-will-not-work-in-production
       Search:
       - eventId[equals]=t1_chb_627ad341b3226992c967215&isFee[equals]=1
       Connection:

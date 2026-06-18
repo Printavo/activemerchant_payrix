@@ -198,7 +198,29 @@ module ActiveMerchant
       def entity_update(id, fields)
         return if id.blank? || fields.blank?
 
-        put(:entities, id, fields.to_json)
+        put(:entities, id, fields)
+      end
+
+      def org(id, url_params = nil)
+        return if id.blank?
+
+        get(endpoint: :orgs, id:, url_params:)
+      end
+
+      def orgs(search, url_params = nil)
+        get_some(endpoint: :orgs, url_params:, headers: token_header.merge(search: search.join("&")))
+      end
+
+      def org_entity_create(org, entity)
+        payload = new_org_entity_payload(org, entity)
+
+        post(:org_entities, payload)
+      end
+
+      def org_entity_delete(id)
+        return if id.blank?
+
+        delete(:org_entities, id)
       end
 
       def transaction(id, url_params = nil)
@@ -214,7 +236,7 @@ module ActiveMerchant
       def transaction_update(id, fields)
         return if id.blank? || fields.blank?
 
-        put(:transactions, id, fields.to_json)
+        put(:transactions, id, fields)
       end
 
       def entries(search, url_params = nil)
@@ -272,6 +294,13 @@ module ActiveMerchant
         }
       end
 
+      def new_org_entity_payload(org, entity)
+        {
+          org:,
+          entity:
+        }
+      end
+
       def get(endpoint:, id:, url_params: [])
         make_request(endpoint:, id:, url_params:) { |url| ssl_get(url, token_header) }.with_indifferent_access.dig(:response, :data, 0)
       end
@@ -304,6 +333,10 @@ module ActiveMerchant
         commit(make_request(endpoint: action, id:) { |url| ssl_put(url, payload&.to_json, token_header) }.with_indifferent_access[:response])
       end
 
+      def delete(action, id, payload = nil)
+        commit(make_request(endpoint: action, id:) { |url| ssl_delete(url, payload&.to_json, token_header) }.with_indifferent_access[:response])
+      end
+
       def commit(response)
         errors = response[:errors] || response.dig(:data, :errors) || []
 
@@ -332,6 +365,8 @@ module ActiveMerchant
         case endpoint
         when :transactions
           base_url += "/txns"
+        when :org_entities
+          base_url += "/orgEntities"
         else
           base_url += "/#{endpoint}" if endpoint.present?
         end
@@ -362,7 +397,11 @@ module ActiveMerchant
       end
 
       def ssl_put(endpoint, data, headers = {})
-        ssl_request(:put, endpoint, data.to_json, headers)
+        ssl_request(:put, endpoint, data, headers)
+      end
+
+      def ssl_delete(endpoint, data, headers = {})
+        ssl_request(:delete, endpoint, data, headers)
       end
 
       def make_request(endpoint:, id: nil, url_params: [])

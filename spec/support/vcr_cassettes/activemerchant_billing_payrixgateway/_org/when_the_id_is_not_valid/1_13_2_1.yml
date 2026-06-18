@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://test-api.payrix.com/entities/t_failed_id
+    uri: https://test-api.payrix.com/orgs/t_failed_id
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       Content-Type:
       - application/json
       Apikey:
-      - respec-test-token-will-not-work-in-production
+      - rspec-test-token-will-not-work-in-production
       Connection:
       - close
       Accept-Encoding:
@@ -25,13 +25,19 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 11 May 2022 20:38:03 GMT
+      - Mon, 15 Jun 2026 23:35:17 GMT
       Content-Type:
       - application/json; charset=UTF-8
       Transfer-Encoding:
       - chunked
       Connection:
       - close
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=61h_eCkvOA0ZUZnKVWHPZkT9tBozr_PCdNDMqJYKUVY-1781566517.4245853-1.0.1.1-.MOng.fP71HMt3p9HovSIXpns0FgeZaYADU9WH6uqXgbQmPepoYOuNeOhxaID46IQcMLqInhA1aeAXMPPi6ZFGWu.Blfty7r889n5V4iCNAXPgGGyLdo0PKcsZsFOgL7;
+        HttpOnly; SameSite=None; Secure; Path=/; Domain=payrix.com; Expires=Tue, 16
+        Jun 2026 00:05:17 GMT
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Max-Age:
@@ -39,17 +45,14 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PUT,POST,DELETE,OPTIONS
       Access-Control-Allow-Headers:
-      - ACCEPT,APIKEY,CONTENT-TYPE,PASSWORD,REQUEST-TOKEN,REQUEST_TOKEN,RESETKEY,SEARCH,SESSIONKEY,TOKEN,TOTALS,USERNAME
+      - ACCEPT,APIKEY, Authorization, CONTENT-TYPE,PASSWORD,REQUEST-TOKEN,REQUEST_TOKEN,RESETKEY,SEARCH,SESSIONKEY,TXNSESSIONKEY,TOKEN,TOTALS,USERNAME,X-FORWARDED-FOR,X-SOURCE,TRACEPARENT,X-DATADOG-ORIGIN,X-DATADOG-PARENT-ID,X-DATADOG-SAMPLING-PRIORITY,X-DATADOG-TRACE-ID,
+        PRE-SHARED-KEY
       Cf-Cache-Status:
       - DYNAMIC
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      Server:
-      - cloudflare
       Cf-Ray:
-      - 709db74c2f7dc633-MSP
+      - a0c563eded971319-PDX
     body:
       encoding: ASCII-8BIT
       string: '{"response":{"data":[],"details":{"requestId":1,"totals":[],"page":{"current":1,"last":1,"hasMore":false}},"errors":[]}}'
-  recorded_at: Wed, 11 May 2022 20:38:02 GMT
-recorded_with: VCR 6.0.0
+  recorded_at: Mon, 15 Jun 2026 23:35:17 GMT
+recorded_with: VCR 6.3.1
